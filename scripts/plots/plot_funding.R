@@ -290,7 +290,8 @@ author %>%
   ) +
   
   geom_point(
-    alpha = 0
+    alpha = 0,
+    size = 5
   ) +
   
   scale_y_continuous(
@@ -312,6 +313,7 @@ author %>%
       x = Year, 
       y = fit_response1
     ),
+    linewidth = 2,
     color = "#FF5733",
   ) +
   
@@ -321,6 +323,7 @@ author %>%
       x = Year, 
       y = fit_response2
     ),
+    linewidth = 2,
     color = "#1ABC9C",
   ) +
 
@@ -330,6 +333,7 @@ author %>%
       x = Year, 
       y = fit_response3
     ),
+    linewidth = 2,
     color = "#C77CFF",
   ) +
   
@@ -339,6 +343,7 @@ author %>%
       x = Year, 
       y = fit_response4
     ),
+    linewidth = 2,
     color = "darkgray",
   ) +
   
@@ -353,7 +358,13 @@ author %>%
   theme(
     legend.position = "right",
     panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    axis.title.x = element_text(size = 25, margin = margin(t = 15)),
+    axis.title.y = element_text(size = 25, margin = margin(r = 15)),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 25)
   ) +
   
   # legend and override alpha
@@ -379,4 +390,4 @@ author %>%
     )
   )
 
-ggsave("out/plot_funding.png", height = 6, width = 8)
+ggsave("out/plot_funding.png", height = 7, width = 9)

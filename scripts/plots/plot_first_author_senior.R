@@ -142,7 +142,8 @@ author %>%
   ) +
   
   geom_point(
-    alpha = 0
+    alpha = 0,
+    size = 5
   ) +
   
   scale_y_continuous(
@@ -164,28 +165,23 @@ author %>%
       x = Year, 
       y = fit_response1
     ),
+    linewidth = 1.5,
     color = "#FF5733",
   ) +
   
-  geom_line(
-    data = newdata1, 
-    mapping = aes(
-      x = Year, 
-      y = upr_response1
-    ),
-    color = "#FF5733",
-    linewidth = 0.1,
-    linetype = "dashed") + 
-  
-  geom_line(
-    data = newdata1, 
-    mapping = aes(
-      x = Year, 
-      y = lwr_response1
-    ),
-    color = "#FF5733",
-    linewidth = 0.1,
-    linetype = "dashed") +
+  geom_ribbon(
+    data = newdata1,
+    mapping = 
+      aes(
+        x = Year,
+        y = fit_response1,
+        ymin = lwr_response1,
+        ymax = upr_response1
+      ),
+    alpha = 0.25,
+    fill = "#FF5733",
+    color = NA
+  ) +
   
   geom_line(
     fit2, 
@@ -193,28 +189,23 @@ author %>%
       x = Year, 
       y = fit_response2
     ),
+    linewidth = 1.5,
     color = "#1ABC9C",
   ) +
   
-  geom_line(
-    data = newdata2, 
-    mapping = aes(
-      x = Year, 
-      y = upr_response2
-    ),
-    color = "#1ABC9C",
-    linewidth = 0.1,
-    linetype = "dashed") + 
-  
-  geom_line(
-    data = newdata2, 
-    mapping = aes(
-      x = Year, 
-      y = lwr_response2
-    ),
-    color = "#1ABC9C",
-    linewidth = 0.1,
-    linetype = "dashed") +
+  geom_ribbon(
+    data = newdata2,
+    mapping = 
+      aes(
+        x = Year,
+        y = fit_response2,
+        ymin = lwr_response2,
+        ymax = upr_response2
+      ),
+    alpha = 0.25,
+    fill = "#00BFC4",
+    color = NA
+  ) +
   
   ggtitle("") +
   
@@ -227,7 +218,13 @@ author %>%
   theme(
     legend.position = "right",
     panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    axis.title.x = element_text(size = 25, margin = margin(t = 15)),
+    axis.title.y = element_text(size = 25, margin = margin(r = 15)),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 25)
   ) +
   
   # legend and override alpha
@@ -249,4 +246,4 @@ author %>%
     )
   )
 
-ggsave("out/plot_first_author_senior.png", height = 6, width = 8)
+ggsave("out/plot_first_author_senior.png", height = 7, width = 10)

@@ -150,7 +150,8 @@ dat_plot1 %>%
   ) +
   
   geom_point(
-    alpha = 0
+    alpha = 0,
+    size = 5
   ) +
   
     scale_y_continuous(
@@ -171,28 +172,23 @@ dat_plot1 %>%
       x = Impact.Factor, 
       y = fit_response1
     ),
+    linewidth = 2,
     color = "#FF5733",
   ) +
   
-  geom_line(
-    data = newdata1, 
-    mapping = aes(
-      x = Impact.Factor, 
-      y = upr_response1
-    ),
-    color = "#FF5733",
-    linewidth = 0.1,
-    linetype = "dashed") + 
-  
-  geom_line(
-    data = newdata1, 
-    mapping = aes(
-      x = Impact.Factor, 
-      y = lwr_response1
-    ),
-    color = "#FF5733",
-    linewidth = 0.1,
-    linetype = "dashed") +
+  geom_ribbon(
+    data = newdata1,
+    mapping = 
+      aes(
+        x = Impact.Factor,
+        y = fit_response1,
+        ymin = lwr_response1,
+        ymax = upr_response1
+      ),
+    alpha = 0.25,
+    fill = "#FF5733",
+    color = NA
+  ) +
   
   ggtitle("") +
   
@@ -205,7 +201,13 @@ dat_plot1 %>%
   theme(
     legend.position = "right",
     panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    axis.title.x = element_text(size = 25, margin = margin(t = 15)),
+    axis.title.y = element_text(size = 25, margin = margin(r = 15)),
+    legend.text = element_text(size = 20),
+    legend.title = element_text(size = 25)
   )
 
-ggsave("out/plot_senior_author_impact.png", height = 6, width = 8)
+ggsave("out/plot_senior_author_impact.png", height = 7, width = 9)
