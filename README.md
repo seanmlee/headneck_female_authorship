@@ -9,8 +9,15 @@ This repository contains reproducible code for our research manuscript titled "F
 <br>  
 
 ## Visual Abstract
-![plot_first_author_senior](https://github.com/seanmlee/headneck_female_authorship/assets/82421211/f43ae6eb-4959-4239-9d62-177c50941e8a)
-![plot_funding](https://github.com/seanmlee/headneck_female_authorship/assets/82421211/6d0e7763-087e-4998-b0f4-fbdae5876dd4)
+![plot_first_author_senior](https://github.com/seanmlee/headneck_female_authorship/assets/82421211/c5faad3a-d8d5-47ad-bf98-96588b4c62cf)
+<br>  
+<br>  
+
+![plot_funding](https://github.com/seanmlee/headneck_female_authorship/assets/82421211/166870c9-f7c1-4083-bde9-e5769190524c)
+<br>  
+<br>  
+
+![plot_senior_author_impact](https://github.com/seanmlee/headneck_female_authorship/assets/82421211/fb84385c-4522-4059-9883-938d547b6b44)
 <br>  
 <br>  
 
