@@ -1,10 +1,10 @@
-## Female Authorship in Head and Neck Surgery
+## Trends of female authorship in head and neck surgery publications over the last decade
 
-<strong>Tatiana Ferraro et al. <em>Manuscript submitted for review</em></strong>
+This repository contains reproducible code for our research manuscript titled `Trends of female authorship in head and neck surgery publications over the last decade`, which is published in the journal `Head & Neck`.
 
-This repository contains reproducible code for our research manuscript titled "Female Authorship in Head and Neck Surgery." We will provide the full citation upon publication.
+<strong>Full citation:</strong> Ferraro, T., Cole, J., Lee, S. M., Pershad, A. R., Lee, E., Hildebrand, H., ... & Thakkar, P. (2024). Trends of female authorship in head and neck surgery publications over the last decade. Head & Neck.
 
-<strong>We will publish final updates to code and `.README` instructions upon publication</strong>
+<strong>DOI:</strong> https://doi.org/10.1002/hed.27819
 <br>  
 <br>  
 
